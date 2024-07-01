@@ -1,0 +1,36 @@
+package OOPs.com;
+
+public class car {
+   private void moveBreakPads(){
+       System.out.println("Car stop");
+    }
+    private void changePistonBreak(){
+        System.out.println("speed car");
+    }
+    private void createSpark(){
+        System.out.println("Car start ");
+    }
+
+    public void turnOncar(){
+       createSpark();
+    }
+    public void accelerate(){
+       changePistonBreak();
+    }
+    public void move(){
+        moveBreakPads();
+    }
+}
+
+//************************************************************
+package OOPs.com;
+
+public class UseCae {
+    public static void main(String[] args) {
+        car obj = new car();
+        obj.turnOncar();
+        obj.accelerate();
+        obj.move();
+    }
+   
+}
