@@ -1,0 +1,36 @@
+package OOPs.com;
+
+public class Student {
+
+    private int rollno;
+    private String name;
+    private double per;
+
+    // Setter method
+    public void setDetails(int i, String str, double p) {
+        this.rollno = i;
+        this.name = str;
+        this.per = p;
+    }
+
+    // Getter method
+    public void displayDetails() {
+        System.out.println("Roll No: " + rollno + ", Name: " + name + ", Percentage: " + per);
+    }
+
+}
+
+//useStuden
+//****************************************************************
+public class Main {
+    public static void main(String[] args) {
+        // Create an instance of Encapsulation
+       Student student = new Student();
+
+        // Set details using the setter method
+        student.setDetails(1, "John Doe", 85.5);
+
+        // Display details using the getter method
+        student.displayDetails();
+    }
+}
