@@ -1,0 +1,64 @@
+public class BankAccount {
+    private String accountNumber;
+    private double balance;
+    private String ownerName;
+
+    // Constructor
+    public BankAccount(String accountNumber, double balance, String ownerName) {
+        this.accountNumber = accountNumber;
+        this.balance = balance;
+        this.ownerName = ownerName;
+    }
+
+    // Getter methods
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    public String getOwnerName() {
+        return ownerName;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+            System.out.println(amount + " deposited. New balance: " + balance);
+        } else {
+            System.out.println("Invalid amount to deposit.");
+        }
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) {
+        if (amount > 0 && amount <= balance) {
+            balance -= amount;
+            System.out.println(amount + " withdrawn. New balance: " + balance);
+        } else {
+            System.out.println("Invalid amount to withdraw or insufficient balance.");
+        }
+    }
+}
+
+
+//******************************************************************
+public class Main {
+    public static void main(String[] args) {
+        // Create a new BankAccount object
+        BankAccount account = new BankAccount("1234567890", 1000.0, "John Doe");
+
+        // Accessing properties using getter methods
+        System.out.println("Account Number: " + account.getAccountNumber());
+        System.out.println("Owner Name: " + account.getOwnerName());
+        System.out.println("Current Balance: " + account.getBalance());
+
+        // Depositing and withdrawing money
+        account.deposit(500.0);
+        account.withdraw(200.0);
+    }
+}
+
