@@ -31,7 +31,7 @@ public class Student {
 }
 
 //useStuden
-//****************************************************************
+//**************************************
 
 // It is not possible in java -- java said to be a in a one file one public class is exit. more than one it is not possible 
 // public class Main {
