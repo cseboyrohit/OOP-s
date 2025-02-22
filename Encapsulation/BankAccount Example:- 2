@@ -45,7 +45,7 @@ public class BankAccount {
 }
 
 
-//******************************************************************
+//**************************************************************
 public class Main {
     public static void main(String[] args) {
         // Create a new BankAccount object
